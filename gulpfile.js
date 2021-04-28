@@ -9,6 +9,7 @@ var cssnano = require('gulp-cssnano');
 var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var del = require('del');
+var concat = require('gulp-concat');
 
 gulp.task('browserSync', function() {
   browserSync.init({
@@ -25,6 +26,12 @@ gulp.task('sass', function(){
     .pipe(browserSync.reload({
       stream: true
     }))
+});
+
+gulp.task('html', function () {
+  return gulp.src(['app/partials/header.html', 'app/partials/indexBody.html', 'app/partials/footer.html'])
+    .pipe(concat("index.html"))
+    .pipe(gulp.dest("app"))
 });
 
 gulp.task('useref', function(){
