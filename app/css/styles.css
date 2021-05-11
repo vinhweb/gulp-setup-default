@@ -4,6 +4,7 @@ body {
 .font-heading {
   font-family: 'Roboto'; }
 
+/* History Train */
 .our-journey {
   width: 100%;
   margin: 0 auto;
@@ -85,3 +86,37 @@ body {
 
 .full-content {
   display: none; }
+
+/* End History Train */
+/* Card Flip */
+.card {
+  perspective: 1400px;
+  width: 100%;
+  height: 400px; }
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s;
+  transform-style: preserve-3d; }
+
+.card:hover .content {
+  transform: rotateY(180deg);
+  transition: transform 0.5s; }
+
+.front,
+.back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  color: #03446A;
+  border-radius: 5px;
+  backface-visibility: hidden; }
+
+.back {
+  color: white;
+  transform: rotateY(180deg); }
+
+/* End Card Flip */
