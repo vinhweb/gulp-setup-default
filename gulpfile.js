@@ -10,6 +10,7 @@ var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var del = require('del');
 var concat = require('gulp-concat');
+var pug = require('gulp-pug');
 
 gulp.task('browserSync', function() {
   browserSync.init({
@@ -23,6 +24,15 @@ gulp.task('sass', function(){
   return gulp.src('app/scss/**/*.scss')
     .pipe(sass())
     .pipe(gulp.dest('app/css'))
+    .pipe(browserSync.reload({
+      stream: true
+    }))
+});
+
+gulp.task('pug', function() {
+  return gulp.src('app/pug/**/*.pug')
+    .pipe(pug())
+    .pipe(gulp.dest('app/'))
     .pipe(browserSync.reload({
       stream: true
     }))
@@ -61,13 +71,14 @@ gulp.task('clean:dist', function(cb) {
 })
 
 
-gulp.task('watch', gulp.parallel('browserSync','sass', function (){
+gulp.task('watch', gulp.parallel('browserSync','sass', 'pug', function (){
   gulp.watch('app/scss/**/*.scss', gulp.series('sass')); 
+  gulp.watch('app/pug/**/*.pug', gulp.series('pug')); 
   gulp.watch('app/*.html', browserSync.reload); 
   gulp.watch('app/js/**/*.js', browserSync.reload); 
 }));
 
-gulp.task('build', gulp.series(`clean:dist`, `sass`, `useref`, `images`, `fonts`), function (){
+gulp.task('build', gulp.series(`clean:dist`, `sass`, `pug`, `useref`, `images`, `fonts`), function (){
   console.log('Building files');
 })
 
