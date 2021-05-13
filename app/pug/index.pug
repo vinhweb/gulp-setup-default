@@ -7,8 +7,12 @@ html(lang="en")
 		meta(name="description" content="")
 		meta(name="author" content="")
 		<link rel="preconnect" href="https://fonts.gstatic.com">
+
 		//build:css css/styles.min.css
-		link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:300,400,500,700,900&display=swap")
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css")
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css")
+
+		link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap")
 		link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap")
 		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css")
 		link(rel="stylesheet" href="css/styles.css")
@@ -20,34 +24,46 @@ html(lang="en")
 		//build:css js/main.min.js
 		script(src="js/jquery-2.2.4.min.js")
 		script(src="js/jquery.easy-autocomplete.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js")
 		script(src="js/custom-script-2-v3.js")
 		script(src="js/main.js")
 		//endbuild
 
 	body.antialiased.bg-body.text-body.font-body
-		section(class="w-24 h-screen z-10 fixed text-white shadow-lg px-3 py-10" style="background: #0a234a")
+		// header
+		section(class="hidden lg:block lg:w-24 h-screen z-10 fixed text-white shadow-lg px-3 py-10" style="background: #0a234a")
 			div(class="flex h-full flex-col justify-between")
-				img(class="w-full" src="images/logo_tac.png")
+				img(class="w-full" src="images/logo_tac2.png")
 				img(class="opacity-80 transition hover:opacity-100 w-10 mx-auto filter invert cursor-pointer" src="images/list.svg")
 				div
 					img(class="opacity-80 transition hover:opacity-100 w-6 mx-auto filter invert cursor-pointer" src="images/search.svg")
 					div(class="opacity-80 transition hover:opacity-100 text-center mt-3 cursor-pointer") VN
-		div.ml-24
 
+		// mobile
+		section(class="lg:hidden w-full z-50 fixed text-white shadow-lg px-3 py-2" style="background: #0a234a")
+			div(class="flex justify-between items-center")
+				img(class="opacity-80 transition hover:opacity-100 w-8 filter invert cursor-pointer" src="images/list.svg")
+				img(class="h-8" src="images/logo_tac2.png")
+				div.flex.items-center
+					img(class="opacity-80 transition hover:opacity-100 w-5 filter invert cursor-pointer" src="images/search.svg")
+					div(class="opacity-80 transition hover:opacity-100 text-center ml-3 cursor-pointer text-xs") VN
+		// end header
+
+		div(class="lg:ml-24")
 			//banner
 			section(class="w-full h-screen relative flex items-center justify-center")
 				//- img(class="w-full h-full object-cover object-center" src="https://ircdn.vingroup.net/storage/Uploads/Photos/Landmark81banner.jpg")
 				img(class="w-full h-full object-cover object-center" src="images/tech_bg.jpg")
-				div(class="w-full h-full absolute text-4xl lg:text-5xl xl:text-6xl font-bold font-heading uppercase text-white flex items-center")
-					div(class="container mx-auto mb-5") CÔNG TY CỔ PHẦN TOP AMERICAN VIỆT NAM
+				div(class="w-full h-full absolute text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold font-heading uppercase text-white flex items-center")
+					div(class="container p-3 mx-auto mb-5 leading-snug") CÔNG TY CỔ PHẦN TOP AMERICAN VIỆT NAM
 			//end banner
 
 			// about us
-			section(class="py-20 bg-gray-50 radius-for-skewed")
+			section(class="py-10 lg:py-20 ")
 				div
-					div(class="container mx-auto grid gap-12 grid-cols-5")
-						div(class="col-span-2")
-							h2(class="mb-10 leading-snug lg:leading-snug text-4xl lg:text-5xl font-bold font-heading uppercase border-l-8 border-red-500 pl-6") Giới Thiệu
+					div(class="container p-3 mx-auto grid lg:gap-12 lg:grid-cols-5 items-center")
+						div(class="lg:col-span-2")
+							h2(class="mb-10 leading-snug lg:leading-snug text-3xl md:text-4xl lg:text-5xl font-bold font-heading uppercase border-l-8 border-red-500 pl-6") Giới Thiệu
 							div(class="space-y-2")
 								p 
 									b Công Ty Cổ Phần Top American Việt Nam 
@@ -59,29 +75,48 @@ html(lang="en")
 								p Tên viết tắt: 
 									b TAC CORP.
 							div(class="mt-10")
-								a(href="#" class="inline-block py-2 px-10 text-red-600 hover:text-white hover:bg-red-600 border-2 border-red-400 uppercase leading-loose outline-none transition duration-200") Tìm hiểu thêm
-						div.col-span-3
-							img(class="w-full h-auto object-cover object-center" src="images/trannhom.jpg")
-					div(class="container mx-auto")
-						div(class="grid grid-cols-4 gap-6 mt-12")
-							a(href="#")
-								img(class="rounded w-full h-44 object-cover object-center" src="images/pro (1).jpg")
-								h4(class="my-3 text-lg text-center font-bold") SALA ĐẠI QUANG MINH
-							a(href="#")
-								img(class="rounded w-full h-44 object-cover object-center" src="images/pro (2).jpg")
-								h4(class="my-3 text-lg text-center font-bold") CÔNG TRÌNH LANDMARK81
-							a(href="#")
-								img(class="rounded w-full h-44 object-cover object-center" src="images/pro (1).png")
-								h4(class="my-3 text-lg text-center font-bold") SÂN BAY CAM RANH
-							a(href="#")
-								img(class="rounded w-full h-44 object-cover object-center" src="images/pro (2).png")
-								h4(class="my-3 text-lg text-center font-bold") BRITISH UNIVERSITY VIỆT NAM
+								//- a(href="#" class="inline-block py-2 px-10 text-red-600 hover:text-white hover:bg-red-600 border-2 border-red-400 uppercase leading-loose outline-none transition duration-200") Tìm hiểu thêm
+						div(class="lg:col-span-3 hidden lg:block")
+							img(class="w-full h-auto object-cover object-center mb-8 lg:mb-0" src="images/trannhom.jpg")
+						
+						// customers
+						div(class="lg:col-span-5 grid grid-cols-1 lg:grid-cols-5 gap-5 items-center")
+							div(class="lg:pb-8")
+								<h2 class="lg:pb-4 leading-snug lg:leading-snug text-3xl lg:text-4xl text-red-500 font-bold font-heading uppercase text-center">Khách hàng</h2>
+									div(class="customerSlideDots relative mb-5 lg:mb-0")
+							div(class="lg:col-span-4")
+								div(id="customerSlider" style="margin-bottom: 0")
+									- var doitac = ['1414385212_logo11.jpg', 'daiquangminh-logo.jpg', 'image.jpg', 'LOGO_THACO.png', 'logo_thumb.jpg', 'LOGO-BMWINDOWS-OFFICIAL-T9-2017-FILEminimizer.jpg', 'logo-concung-cham-com.png', 'logo-Coteccons.jpg']
+									each dt in doitac
+										a
+											img(class="h-32 object-center object-contain w-full" src="images/customer/"+dt )
+						// end customers
+
 			// end about us
 
+			// share overview
+			section(class="py-10 lg:py-20 bg-gray-50")
+				div(class="container p-3 mx-auto grid grid-cols-3 gap-8")
+					div(class="col-span-3")
+						h2(class="mb-10 leading-snug lg:leading-snug text-3xl md:text-4xl lg:text-5xl font-bold font-heading uppercase border-l-8 border-red-500 pl-6") Dự Án Hoàn Thành
+
+						-var cp=[{img:'images/pro (1).jpg',title:'SALA ĐẠI QUANG MINH'},{img:'images/pro (2).jpg',title:'CÔNG TRÌNH LANDMARK81'},{img:'images/pro (1).jpg',title:'SÂN BAY CAM RANH'},{img:'images/pro (2).jpg',title:'BRITISH UNIVERSITY VIỆT NAM'}, {img:'http://tac-industry.com/images/AnhDuAn/1.png',title:'NHÀ MÁY NHÔM TOÀN CẦU'}, {img:'http://tac-industry.com/images/AnhDuAn/13.png',title:'AN GIA GARDEN BAY'}]
+						div(class="grid lg:grid-cols-2 lg:grid-cols-3")
+							each p in cp
+								div(class="transition border-2 border-transparent hover:border-gray-700  p-2 lg:p-4")
+									a(class="relative flex text-white" href="#")
+										img(class="w-full h-60 object-cover object-center" src=p.img)
+										div(class="absolute flex items-center justify-center z-10 h-full w-full bg-gradient-to-t from-gray-800 to-transparent bg-opacity-10 transition border-0 border-red-500 p-4 opacity-100")
+											h4(class="my-3 text-xl lg:text-2xl text-center font-bold")=p.title
+						div(class="mt-8 lg:mt-10") Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere dolore quod obcaecati atque, commodi nam saepe similique repudiandae ex voluptatum eveniet reiciendis temporibus natus sunt quae facilis, architecto iusto velit? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere dolore quod obcaecati atque, commodi nam saepe similique repudiandae ex voluptatum eveniet reiciendis temporibus natus sunt quae facilis, architecto iusto velit?
+						div(class="mt-8 lg:mt-10")
+							a(href="#" class="inline-block py-2 px-10 text-red-600 hover:text-white hover:bg-red-600 border-2 border-red-400 uppercase leading-loose outline-none transition duration-200") Tìm hiểu thêm
+			// end share overview
+
 			// history
-			section(id="journey" class="py-20 bg-gray-100 relative")
-				.fluid-container.overflow-hidden
-					h2(class="leading-snug lg:leading-snug text-4xl lg:text-5xl font-bold font-heading uppercase" style='margin-bottom: 120px; text-align: center') Lịch sử Công Ty
+			section(id="journey" class="py-10 lg:py-20 bg-gray-100 relative")
+				.fluid-container.p-3.overflow-hidden
+					h2(class="leading-snug lg:leading-snug text-3xl md:text-4xl lg:text-5xl font-bold font-heading uppercase" style='margin-bottom: 120px; text-align: center') Lịch sử Công Ty
 					.our-journey
 						.marquee.journey-slider(data-direction='right')
 							- for (var i = 1; i<6; i++)
@@ -112,60 +147,73 @@ html(lang="en")
 						// <div class="journey-next"></div>
 						.track
 					.clearfix
-					div.text-center.mt-16
+					div(class="text-center mt-10 lg:mt-16")
 						a(href="#" class="inline-block py-2 px-10 text-red-600 hover:text-white hover:bg-red-600 border-2 border-red-400 uppercase leading-loose outline-none transition duration-200") Xem tất cả
 
 			// end history
 
 			// Giai phap
 			section(class="" )
-				div(class="py-20 bg-gray-50 radius-for-skewed")
-					div(class="container mx-auto px-4")
+				div(class="py-10 lg:py-20 bg-gray-50 ")
+					div(class="container p-3 mx-auto px-4")
 						div(class="mb-16 ")
 							//- span(class="text-green-600 font-bold") Dolor sit amet consectutar
-							h2(class="leading-snug lg:leading-snug text-4xl lg:text-5xl font-bold font-heading uppercase border-l-8 border-red-500 pl-6") Giải Pháp
-						div(class="grid grid-cols-5 grid-rows-2 gap-10")
-							div(class="row-span-2 col-span-2 flex relative mx-auto text-white" style="width: fit-content")
-								img(class="w-full object-cover mx-auto" style="max-width: 400px"  src="images/john-paul-henry-kfqm9IBEF68-unsplash.jpg")
-								div(class="absolute z-10 h-full w-full bg-purple-800 bg-opacity-30 hover:bg-purple-700 transition border-0 border-purple-700 p-4 opacity-90")
-								p(class="text-2xl font-semibold absolute z-20 left-0 bottom-0 ml-6 mb-8") TẤM ỐP NHÔM MẶT DỰNG
-							div(class="col-span-3 grid grid-cols-3 gap-7")
-								div(class="relative cursor-pointer flex text-white")
-									img(class="w-full object-cover" src="images/feature (1).jpg")
-									div(class="absolute z-10 h-full w-full bg-red-400 bg-opacity-20 hover:bg-red-500 transition border-0 border-red-500 p-4 opacity-90")
-									p(class="text-lg font-semibold absolute z-20 left-0 bottom-0 ml-4 mb-4") TRẦN NHÔM KIM LOẠI
-								div(class="relative cursor-pointer flex text-white")
-									img(class="w-full object-cover" src="images/feature (2).jpg")
-									div(class="absolute z-10 h-full w-full bg-red-400 bg-opacity-20 hover:bg-red-500 transition border-0 border-red-500 p-4 opacity-90")
-									p(class="text-lg font-semibold absolute z-20 left-0 bottom-0 ml-4 mb-4")  TẤM ỐP NHÔM SOLID
-								div(class="relative cursor-pointer flex text-white")
-									img(class="w-full object-cover" src="images/feature (3).jpg")
-									div(class="absolute z-10 h-full w-full bg-red-400 bg-opacity-20 hover:bg-red-500 transition border-0 border-red-500 p-4 opacity-90")
-									p(class="text-lg font-semibold absolute z-20 left-0 bottom-0 ml-4 mb-4")  TẤM ỐP NHÔM NHỰA
-							div(class="col-span-3 flex items-center")
-								div(class="flex")
-									img(class="h-60" src="images/tech_2.jpg")
-									div(class=" ml-5")
-										h4(class="text-lg font-semibold mb-3") TẤM ỐP NHÔM MẶT DỰNG
-										p(class="text-gray-500") Đáp ứng hình dáng đặc biệt phức tạp theo ý tưởng xây dựng (gấp hộp, uốn cong). Màu sắc và họa tiết bề mặt sơn đáp ứng linh hoạt theo yêu cầu thiết kế
-										div.flex.space-x-4
-											div(class="text-gray-500 text-sm mt-3") Ngày: 20/03/2021
-											div(class="text-gray-500 text-sm mt-3") Lượt xem: 2K
-										a(href="#" class="ml-auto text-red-500 block text-right") Chi tiết >>
+							h2(class="leading-snug lg:leading-snug text-3xl md:text-4xl lg:text-5xl font-bold font-heading uppercase border-l-8 border-red-500 pl-6") Giải Pháp
+						div(class="grid lg:grid-cols-5 lg:grid-rows-2 lg:gap-x-10 ")
+							div(class="lg:row-span-2 lg:col-span-2 flex relative mx-auto text-white lg:w-10/12 xl:w-9/12")
+								img(class="w-full h-96 object-cover mx-auto lg:h-auto lg:w-auto"   src="images/john-paul-henry-kfqm9IBEF68-unsplash.jpg")
+								//- div(class="absolute z-10 h-full w-full bg-purple-800 bg-opacity-30 hover:bg-purple-700 transition border-0 border-purple-700 p-4 opacity-90")
+								p(class="text-2xl font-semibold absolute z-20 left-0 bottom-0 mx-4 lg:mx-6 mb-8") TẤM ỐP NHÔM MẶT DỰNG
+
+							div(class="lg:col-span-3 relative overflow-hidden")
+								div(id="giaiPhapSlide" class="relative" style="" )
+									div(class="relative cursor-pointer flex text-white md:mx-2")
+										img(class="w-full h-56 lg:h-auto object-cover" src="images/feature (1).jpg")
+										div(class="absolute z-10 h-full w-full bg-red-400 bg-opacity-20 hover:bg-red-500 transition border-0 border-red-500 p-4 opacity-90")
+										p(class="text-lg font-semibold absolute z-20 left-0 bottom-0 ml-4 mb-4") TRẦN NHÔM KIM LOẠI
+									div(class="relative cursor-pointer flex text-white lg:mx-2")
+										img(class="w-full h-56 lg:h-auto object-cover" src="images/feature (2).jpg")
+										div(class="absolute z-10 h-full w-full bg-red-400 bg-opacity-20 hover:bg-red-500 transition border-0 border-red-500 p-4 opacity-90")
+										p(class="text-lg font-semibold absolute z-20 left-0 bottom-0 ml-4 mb-4")  TẤM ỐP NHÔM SOLID
+									div(class="relative cursor-pointer flex text-white lg:mx-2")
+										img(class="w-full h-56 lg:h-auto object-cover" src="images/feature (3).jpg")
+										div(class="absolute z-10 h-full w-full bg-red-400 bg-opacity-20 hover:bg-red-500 transition border-0 border-red-500 p-4 opacity-90")
+										p(class="text-lg font-semibold absolute z-20 left-0 bottom-0 ml-4 mb-4")  TẤM ỐP NHÔM NHỰA
+									div(class="relative cursor-pointer flex text-white md:mx-2")
+										img(class="w-full h-56 lg:h-auto object-cover" src="images/feature (1).jpg")
+										div(class="absolute z-10 h-full w-full bg-red-400 bg-opacity-20 hover:bg-red-500 transition border-0 border-red-500 p-4 opacity-90")
+										p(class="text-lg font-semibold absolute z-20 left-0 bottom-0 ml-4 mb-4") TRẦN NHÔM KIM LOẠI
+									div(class="relative cursor-pointer flex text-white lg:mx-2")
+										img(class="w-full h-56 lg:h-auto object-cover" src="images/feature (2).jpg")
+										div(class="absolute z-10 h-full w-full bg-red-400 bg-opacity-20 hover:bg-red-500 transition border-0 border-red-500 p-4 opacity-90")
+										p(class="text-lg font-semibold absolute z-20 left-0 bottom-0 ml-4 mb-4")  TẤM ỐP NHÔM SOLID
+
+							div(class="lg:col-span-3 relative overflow-hidden")
+								div(id="contentSlide")
+									- for(var i = 0; i< 4; i++)
+										div(class="block lg:flex items-center")
+											img(class="object-center object-cover w-full lg:w-auto h-48 lg:h-72 lg:mt-10 lg:mx-2" src="images/tech_2.jpg")
+											div(class="mt-5 lg:ml-5")
+												h4(class="text-lg font-semibold mb-3") TẤM ỐP NHÔM MẶT DỰNG
+												p(class="text-gray-500") Đáp ứng hình dáng đặc biệt phức tạp theo ý tưởng xây dựng (gấp hộp, uốn cong). Màu sắc và họa tiết bề mặt sơn đáp ứng linh hoạt theo yêu cầu thiết kế
+												div.flex.space-x-4
+													div(class="text-gray-500 text-sm mt-3") Ngày: 20/03/2021
+													div(class="text-gray-500 text-sm mt-3") Lượt xem: 2K
+												a(href="#" class="ml-auto text-red-500 block text-right") Chi tiết >>
 			// End giai phap
 
 
 			// Doi tac
 			section(class="" )
-				div(class="py-20 bg-gray-50 radius-for-skewed" style="background: linear-gradient( rgba(255,255,255, 0.9), rgba(255,255,255, 01) ), url(/images/DSC_1015.jpg) top center no-repeat")
-					div(class="container mx-auto px-4")
+				div(class="py-10 lg:py-20 bg-gray-50 " style="background: linear-gradient( rgba(255,255,255, 0.9), rgba(255,255,255, 01) ), url(/images/DSC_1015.jpg) top center no-repeat")
+					div(class="container p-3 mx-auto px-4")
 						div(class="mb-12")
-							h2(class="leading-snug lg:leading-snug text-4xl lg:text-5xl font-bold font-heading uppercase text-center") Đối Tác
-						div(class="grid grid-cols-2 gap-10")
+							h2(class="leading-snug lg:leading-snug text-3xl md:text-4xl lg:text-5xl font-bold font-heading uppercase text-center") Đối Tác
+						div(class="grid lg:grid-cols-2 gap-5 lg:gap-10")
 							- var arr = [{img:'/images/10.-Hm-th-thim.jpg',title:'Hầm Thủ Thiên',p:'BQLDA Đại lộ Đông Tây'},{img:'/images/12.-Sala-i-quang-minh.jpg',title:'SALA ĐẠI QUANG MINH',p:'Công ty Đại Quang Minh'},{img:'/images/11.-Thaco.jpg',title:'HỆ THỐNG SHOWROOM THACO',p:'Công ty CP ô tô Trường Hải'},{img:'/images/17.-sherwood.jpg',title:'SHERWOOD RESIDENCE',p:'Công ty TNHH Vạn Thịnh Phát'}]
 							
 							each item in arr
-								div(class="relative cursor-pointer flex text-white card")
+								div(class="relative cursor-pointer flex text-white card lg:h-auto")
 									div.content
 										div.front.flex
 											img(class="w-full object-cover object-center" src=item.img)
@@ -176,20 +224,20 @@ html(lang="en")
 												h3(class="font-bold text-2xl")= item.title
 												p(class="opacity-90")= item.p
 
-					div.text-center.mt-16
+					div(class="text-center mt-10 lg:mt-16")
 						a(href="#" class="inline-block py-2 px-10 text-red-600 hover:text-white hover:bg-red-600 border-2 border-red-400 uppercase leading-loose outline-none transition duration-200") Xem tất cả
 			// End Doi Tac
 
 
 			section(class="" )
-				div(class="py-20 bg-gray-50 radius-for-skewed")
-					div(class="container mx-auto px-4")
-						div(class="grid grid-cols-2 gap-10")
+				div(class="py-10 lg:py-20 bg-gray-50 ")
+					div(class="container p-3 mx-auto px-4")
+						div(class="grid lg:grid-cols-2 gap-5 lg:gap-10")
 							div 
-								div(class="mb-16 ")
+								div(class="mb-10 lg:mb-16 ")
 									//- span(class="text-green-600 font-bold") Dolor sit amet consectutar
-									h2(class="leading-snug lg:leading-snug text-4xl lg:text-5xl font-bold font-heading uppercase border-l-8 border-red-500 pl-6") Liên Hệ
-								div.grid.grid-cols-2.gap-6
+									h2(class="leading-snug lg:leading-snug text-3xl md:text-4xl lg:text-5xl font-bold font-heading uppercase border-l-8 border-red-500 pl-6") Liên Hệ
+								div(class="grid lg:grid-cols-2 gap-6")
 									div
 										h3(class="font-bold text-2xl mb-5") HCM - Trụ sở chính
 										div(class="text-gray-500")
@@ -214,10 +262,10 @@ html(lang="en")
 											p.flex.space-x-5.mb-3
 												img(src="images/telephone-fill.svg")
 												span (+84) 0933 178 272
-							div(class="items-end flex justify-end")
+							div(class="items-end lg:flex justify-end")
 								div 
-									h2(class="leading-snug lg:leading-snug text-3xl text-red-500 font-bold font-heading uppercase ") Bài viết mới
-									ul(class="text-gray-500 space-y-4 mt-10")
+									h2(class="leading-snug lg:leading-snug text-2xl lg:text-3xl text-red-500 font-bold font-heading uppercase ") Bài viết mới
+									ul(class="text-gray-500 space-y-4 mt-6 lg:mt-10")
 										li(class="hover:text-black cursor-pointer") 5 ỨNG DỤNG CỰC HỮU HIỆU TẤM ALU COMPOSITE TAC PVDF (TAC F)
 										li(class="hover:text-black cursor-pointer") Chăm chút cho bảng hiệu - thiết thực hay lãng phí?
 										li(class="hover:text-black cursor-pointer") SƠN PVDF - FAQ - Những câu hỏi thường gặp
@@ -228,8 +276,8 @@ html(lang="en")
 
 			//Footer
 			section(class="" )
-				div(class="py-20 bg-gray-900 radius-for-skewed")
-					div(class="container mx-auto px-4")
+				div(class="py-10 lg:py-20 bg-gray-900 ")
+					div(class="container p-3 mx-auto px-4")
 						div(class="flex flex-wrap")
 							div(class="w-full lg:w-1/3 mb-16 lg:mb-0")
 								a(href="#", class="inline-block mb-3 text-white text-3xl font-bold leading-none")
@@ -276,4 +324,4 @@ html(lang="en")
 											a(class="text-gray-400 hover:text-gray-300", href="#") Việc làm
 										li
 											a(class="text-gray-400 hover:text-gray-300", href="#") Liên hệ
-						p(class="lg:text-center text-sm text-gray-400 border-t border-gray-800 pt-12 mt-16") &copy; 2021. All rights reserved.
+						p(class="lg:text-center text-sm text-gray-400 border-t border-gray-800 pt-12 mt-10 lg:mt-16") &copy; 2021. All rights reserved.
