@@ -46,5 +46,14 @@ $(document).ready(function(){
     slidesToShow: 1,
     slidesToScroll: 1,
   });
+
+
+  const menuBtn = $('.menuBtn')
+  const menuHeader = $('#menuHeader')
+
+  menuBtn.click(()=>{
+    menuHeader.toggleClass('hidden')
+    menuBtn.toggleClass('active')
+  })
 });
 		

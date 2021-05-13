@@ -29,20 +29,37 @@ html(lang="en")
 		script(src="js/main.js")
 		//endbuild
 
-	body.antialiased.bg-body.text-body.font-body
+	body.antialiased.bg-body.text-body.font-body.relative
 		// header
-		section(class="hidden lg:block lg:w-24 h-screen z-10 fixed text-white shadow-lg px-3 py-10" style="background: #0a234a")
+		section(class="hidden lg:block lg:w-24 h-screen z-50 fixed text-white shadow-lg px-3 py-10" style="background: #0a234a")
 			div(class="flex h-full flex-col justify-between")
 				img(class="w-full" src="images/logo_tac2.png")
-				img(class="opacity-80 transition hover:opacity-100 w-10 mx-auto filter invert cursor-pointer" src="images/list.svg")
+				div(class=" menuBtn opacity-80 transition hover:opacity-100 w-10 mx-auto filter invert cursor-pointer")
+					img(class="w-full open" src="images/list.svg")
+					img(class="w-full close" src="images/x.svg")
 				div
 					img(class="opacity-80 transition hover:opacity-100 w-6 mx-auto filter invert cursor-pointer" src="images/search.svg")
 					div(class="opacity-80 transition hover:opacity-100 text-center mt-3 cursor-pointer") VN
 
+		section(id="menuHeader" class="hidden w-full h-screen bg-white fixed top-0 left-0 z-40")
+			div(class="lg:ml-36 flex h-full mt-28 lg:mt-auto lg:items-center")
+				ul(class="ml-12 lg:ml-24 text-gray-500 font-semibold text-xl lg:text-2xl uppercase space-y-4")
+					li(class="cursor-pointer hover:text-red-700 text-red-700") Trang chủ
+					li(class="cursor-pointer hover:text-red-700") Sản phẩm
+					li(class="cursor-pointer hover:text-red-700") Công nghệ
+					li(class="cursor-pointer hover:text-red-700") Dự án
+					li(class="cursor-pointer hover:text-red-700") Góc chuyên gia 
+					li(class="cursor-pointer hover:text-red-700") Tin tức
+					li(class="cursor-pointer hover:text-red-700") Về chúng tôi
+					li(class="cursor-pointer hover:text-red-700") Liên hệ
+
 		// mobile
 		section(class="lg:hidden w-full z-50 fixed text-white shadow-lg px-3 py-2" style="background: #0a234a")
 			div(class="flex justify-between items-center")
-				img(class="opacity-80 transition hover:opacity-100 w-8 filter invert cursor-pointer" src="images/list.svg")
+				div(class="menuBtn opacity-80 transition hover:opacity-100 w-8 filter invert cursor-pointer")
+					img(class="w-full open" src="images/list.svg")
+					img(class="w-full close" src="images/x.svg")
+
 				img(class="h-8" src="images/logo_tac2.png")
 				div.flex.items-center
 					img(class="opacity-80 transition hover:opacity-100 w-5 filter invert cursor-pointer" src="images/search.svg")

@@ -16,7 +16,7 @@ body {
 .marquee {
   width: 100%;
   position: relative;
-  z-index: 99; }
+  z-index: 30; }
 
 .marquee .item {
   display: inline-block;
@@ -171,3 +171,13 @@ body {
     display: block !important; } }
 
 /* end slide */
+.menuBtn .close {
+  display: none; }
+
+.menuBtn.active .open {
+  display: none; }
+
+.menuBtn.active .close {
+  display: block; }
+
+/* Header */
