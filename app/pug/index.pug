@@ -1,7 +1,7 @@
 doctype html
 html(lang="en")
 	head
-		title TAC | CÔNG TY CỔ PHẦN TOP AMERICAN VIỆT NAM
+		title Page title
 		meta(charset="utf-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
 		meta(name="description" content="")
@@ -13,8 +13,9 @@ html(lang="en")
 		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css")
 
 		link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap")
-		link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap")
 		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css")
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css")
+		link(rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css")
 		link(rel="stylesheet" href="css/styles.css")
 		//endbuild
 
@@ -24,321 +25,104 @@ html(lang="en")
 		//build:css js/main.min.js
 		script(src="js/jquery-2.2.4.min.js")
 		script(src="js/jquery.easy-autocomplete.min.js")
+		script(src="https://unpkg.com/aos@next/dist/aos.js")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js")
 		script(src="js/custom-script-2-v3.js")
 		script(src="js/main.js")
 		//endbuild
 
 	body.antialiased.bg-body.text-body.font-body.relative
-		// header
-		section(class="hidden lg:block lg:w-24 h-screen z-50 fixed text-white shadow-lg px-3 py-10" style="background: #0a234a")
-			div(class="flex h-full flex-col justify-between")
-				img(class="w-full" src="images/logo_tac2.png")
-				div(class=" menuBtn opacity-80 transition hover:opacity-100 w-10 mx-auto filter invert cursor-pointer")
-					img(class="w-full open" src="images/list.svg")
-					img(class="w-full close" src="images/x.svg")
-				div
-					img(class="opacity-80 transition hover:opacity-100 w-6 mx-auto filter invert cursor-pointer" src="images/search.svg")
-					div(class="opacity-80 transition hover:opacity-100 text-center mt-3 cursor-pointer") VN
 
-		section(id="menuHeader" class="hidden w-full h-screen bg-white fixed top-0 left-0 z-40")
-			div(class="lg:ml-36 flex h-full mt-28 lg:mt-auto lg:items-center")
-				ul(class="ml-12 lg:ml-24 text-gray-500 font-semibold text-xl lg:text-2xl uppercase space-y-4")
-					li(class="cursor-pointer hover:text-red-700 text-red-700") Trang chủ
-					li(class="cursor-pointer hover:text-red-700") Sản phẩm
-					li(class="cursor-pointer hover:text-red-700") Công nghệ
-					li(class="cursor-pointer hover:text-red-700") Dự án
-					li(class="cursor-pointer hover:text-red-700") Góc chuyên gia 
-					li(class="cursor-pointer hover:text-red-700") Tin tức
-					li(class="cursor-pointer hover:text-red-700") Về chúng tôi
-					li(class="cursor-pointer hover:text-red-700") Liên hệ
-
-		// mobile
-		section(class="lg:hidden w-full z-50 fixed text-white shadow-lg px-3 py-2" style="background: #0a234a")
-			div(class="flex justify-between items-center")
-				div(class="menuBtn opacity-80 transition hover:opacity-100 w-8 filter invert cursor-pointer")
-					img(class="w-full open" src="images/list.svg")
-					img(class="w-full close" src="images/x.svg")
-
-				img(class="h-8" src="images/logo_tac2.png")
-				div.flex.items-center
-					img(class="opacity-80 transition hover:opacity-100 w-5 filter invert cursor-pointer" src="images/search.svg")
-					div(class="opacity-80 transition hover:opacity-100 text-center ml-3 cursor-pointer text-xs") VN
-		// end header
-
-		div(class="lg:ml-24")
-			//banner
-			section(class="w-full h-screen relative flex items-center justify-center")
-				//- img(class="w-full h-full object-cover object-center" src="https://ircdn.vingroup.net/storage/Uploads/Photos/Landmark81banner.jpg")
-				img(class="w-full h-full object-cover object-center" src="images/tech_bg.jpg")
-				div(class="w-full h-full absolute text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold font-heading uppercase text-white flex items-center")
-					div(class="container p-3 mx-auto mb-5 leading-snug") CÔNG TY CỔ PHẦN TOP AMERICAN VIỆT NAM
-			//end banner
-
-			// about us
-			section(class="py-10 lg:py-20 ")
-				div
-					div(class="container p-3 mx-auto grid lg:gap-12 lg:grid-cols-5 items-center")
-						div(class="lg:col-span-2")
-							h2(class="mb-10 leading-snug lg:leading-snug text-3xl md:text-4xl lg:text-5xl font-bold font-heading uppercase border-l-8 border-red-500 pl-6") Giới Thiệu
-							div(class="space-y-2")
-								p 
-									b Công Ty Cổ Phần Top American Việt Nam 
-									span được thành lập vào ngày 28/2/2008, theo giấy chứng nhập đâu tư số: 462035000403 do Ban quản lý khu công nghiệp Bình Dương cấp và thay đổi lần thứ nhất vào ngày 24/6/2011 theo chứng nhận đăng kí kinh doanh số: 3701888519 do sở kế hoạch và Đầu tư Bình Dương cấp.
-								p Tên Tiếng Việt: 
-									b CÔNG TY CỔ PHẦN TOP AMERICAN VIỆT NAM
-								p Tên Tiếng Anh: 
-									b TOP AMERICAN VIET NAM CORPORATION
-								p Tên viết tắt: 
-									b TAC CORP.
-							div(class="mt-10")
-								//- a(href="#" class="inline-block py-2 px-10 text-red-600 hover:text-white hover:bg-red-600 border-2 border-red-400 uppercase leading-loose outline-none transition duration-200") Tìm hiểu thêm
-						div(class="lg:col-span-3 hidden lg:block")
-							img(class="w-full h-auto object-cover object-center mb-8 lg:mb-0" src="images/trannhom.jpg")
-						
-						// customers
-						div(class="lg:col-span-5 grid grid-cols-1 lg:grid-cols-5 gap-5 items-center")
-							div(class="lg:pb-8")
-								<h2 class="lg:pb-4 leading-snug lg:leading-snug text-3xl lg:text-4xl text-red-500 font-bold font-heading uppercase text-center">Khách hàng</h2>
-									div(class="customerSlideDots relative mb-5 lg:mb-0")
-							div(class="lg:col-span-4")
-								div(id="customerSlider" style="margin-bottom: 0")
-									- var doitac = ['1414385212_logo11.jpg', 'daiquangminh-logo.jpg', 'image.jpg', 'LOGO_THACO.png', 'logo_thumb.jpg', 'LOGO-BMWINDOWS-OFFICIAL-T9-2017-FILEminimizer.jpg', 'logo-concung-cham-com.png', 'logo-Coteccons.jpg']
-									each dt in doitac
-										a
-											img(class="h-32 object-center object-contain w-full" src="images/customer/"+dt )
-						// end customers
-
-			// end about us
-
-			// share overview
-			section(class="py-10 lg:py-20 bg-gray-50")
-				div(class="container p-3 mx-auto grid grid-cols-3 gap-8")
-					div(class="col-span-3")
-						h2(class="mb-10 leading-snug lg:leading-snug text-3xl md:text-4xl lg:text-5xl font-bold font-heading uppercase border-l-8 border-red-500 pl-6") Dự Án Hoàn Thành
-
-						-var cp=[{img:'images/pro (1).jpg',title:'SALA ĐẠI QUANG MINH'},{img:'images/pro (2).jpg',title:'CÔNG TRÌNH LANDMARK81'},{img:'images/pro (1).jpg',title:'SÂN BAY CAM RANH'},{img:'images/pro (2).jpg',title:'BRITISH UNIVERSITY VIỆT NAM'}, {img:'http://tac-industry.com/images/AnhDuAn/1.png',title:'NHÀ MÁY NHÔM TOÀN CẦU'}, {img:'http://tac-industry.com/images/AnhDuAn/13.png',title:'AN GIA GARDEN BAY'}]
-						div(class="grid lg:grid-cols-2 lg:grid-cols-3")
-							each p in cp
-								div(class="transition border-2 border-transparent hover:border-gray-700  p-2 lg:p-4")
-									a(class="relative flex text-white" href="#")
-										img(class="w-full h-60 object-cover object-center" src=p.img)
-										div(class="absolute flex items-center justify-center z-10 h-full w-full bg-gradient-to-t from-gray-800 to-transparent bg-opacity-10 transition border-0 border-red-500 p-4 opacity-100")
-											h4(class="my-3 text-xl lg:text-2xl text-center font-bold")=p.title
-						div(class="mt-8 lg:mt-10") Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere dolore quod obcaecati atque, commodi nam saepe similique repudiandae ex voluptatum eveniet reiciendis temporibus natus sunt quae facilis, architecto iusto velit? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere dolore quod obcaecati atque, commodi nam saepe similique repudiandae ex voluptatum eveniet reiciendis temporibus natus sunt quae facilis, architecto iusto velit?
-						div(class="mt-8 lg:mt-10")
-							a(href="#" class="inline-block py-2 px-10 text-red-600 hover:text-white hover:bg-red-600 border-2 border-red-400 uppercase leading-loose outline-none transition duration-200") Tìm hiểu thêm
-			// end share overview
-
-			// history
-			section(id="journey" class="py-10 lg:py-20 bg-gray-100 relative")
-				.fluid-container.p-3.overflow-hidden
-					h2(class="leading-snug lg:leading-snug text-3xl md:text-4xl lg:text-5xl font-bold font-heading uppercase" style='margin-bottom: 120px; text-align: center') Lịch sử Công Ty
-					.our-journey
-						.marquee.journey-slider(data-direction='right')
-							- for (var i = 1; i<6; i++)
-								.item(style='opacity: 0')
-									.nalco-train-cont(data-target='#year-modal' data-toggle='modal')
-										img(src='images/nalco-train.png' alt='train-wagon')
-										.journey-year
-											p 1975
-											span Discovery of East Coast Bauxite - 1975
-										.full-content
-											ul
-												li Discovery of East Coast Bauxite - 1975
-							- var history=[{year:2008,title:'Dây chuyền sơn nhôm cuộn số 1',content:'Sản xuất cung ứng và gia công sơn nhôm cuộn màu'},{year:2010,title:'Dây chuyền sơn nhôm cuộn số 2',content:'Sản xuất cung ứng và gia công sơn nhôm cuộn màu'},{year:2012,title:'Dây chuyền xà băng',content:'Sản xuất cung ứng và gia công sơn nhôm cuộn màu'},{year:2013,title:'Dây chuyền tấm Phức hợp nhôm nhựa (ACP)',content:'Sản xuất cung ứng tấm ACP'},{year:2014,title:'Dây chuyền sản xuất các loại trần - lam nhôm',content:'Sản xuất cung ứng sản phẩm tấm nhôm'},{year:2015,title:'Dây chuyền gia công mặt dựng nhôm theo thiết kế',content:'Sản xuất gia công vật liệu, mặt dựng nhôm trong các công trình khác'},{year:2016,title:'Dây chuyền PVDF và sơn bột tĩnh điện',content:'Sản xuất gia công vật liệu, mặt dựng nhôm trong các công trình khác'},]
-							
-							each item in history
-								.item
-									.nalco-train-cont(data-target='#year-modal' data-toggle='modal')
-										img(src='images/nalco-train.png' alt='train-wagon')
-										.journey-year
-											p=item.year
-											span=item.title
-										.full-content
-											ul
-												li=item.content
-							.item
-								.nalco-train-cont
-									img(src='images/train-engine1.png' alt='train-engine')
-						// <div class="journey-next"></div>
-						.track
-					.clearfix
-					div(class="text-center mt-10 lg:mt-16")
-						a(href="#" class="inline-block py-2 px-10 text-red-600 hover:text-white hover:bg-red-600 border-2 border-red-400 uppercase leading-loose outline-none transition duration-200") Xem tất cả
-
-			// end history
-
-			// Giai phap
-			section(class="" )
-				div(class="py-10 lg:py-20 bg-gray-50 ")
-					div(class="container p-3 mx-auto px-4")
-						div(class="mb-16 ")
-							//- span(class="text-green-600 font-bold") Dolor sit amet consectutar
-							h2(class="leading-snug lg:leading-snug text-3xl md:text-4xl lg:text-5xl font-bold font-heading uppercase border-l-8 border-red-500 pl-6") Giải Pháp
-						div(class="grid gap-y-10 lg:gap-y-0 lg:grid-cols-5 lg:grid-rows-2 lg:gap-x-10 ")
-							div(class="w-full lg:row-span-2 lg:col-span-2 flex relative mx-auto text-white lg:w-10/12 xl:w-9/12")
-								img(class="w-full h-96 lg:h-auto object-cover mx-auto xl:h-auto xl:w-auto"   src="images/john-paul-henry-kfqm9IBEF68-unsplash.jpg")
-								div(class="absolute z-10 h-full w-full bg-purple-800 bg-opacity-30 hover:bg-purple-700 transition border-0 border-purple-700 p-4 opacity-90")
-								p(class="text-2xl font-semibold absolute z-20 left-0 bottom-0 mx-4 lg:mx-6 mb-8") TẤM ỐP NHÔM MẶT DỰNG
-
-							div(class="lg:col-span-3 relative overflow-hidden")
-								div(id="giaiPhapSlide" class="" style="" )
-									div(class="relative cursor-pointer flex text-white md:mx-2")
-										img(class="w-full h-56 lg:h-auto object-cover" src="images/feature (1).jpg")
-										div(class="absolute z-10 h-full w-full bg-red-400 bg-opacity-20 hover:bg-red-500 transition border-0 border-red-500 p-4 opacity-90")
-										p(class="text-lg font-semibold absolute z-20 left-0 bottom-0 ml-4 mb-4") TRẦN NHÔM KIM LOẠI
-									div(class="relative cursor-pointer flex text-white lg:mx-2")
-										img(class="w-full h-56 lg:h-auto object-cover" src="images/feature (2).jpg")
-										div(class="absolute z-10 h-full w-full bg-red-400 bg-opacity-20 hover:bg-red-500 transition border-0 border-red-500 p-4 opacity-90")
-										p(class="text-lg font-semibold absolute z-20 left-0 bottom-0 ml-4 mb-4")  TẤM ỐP NHÔM SOLID
-									div(class="relative cursor-pointer flex text-white lg:mx-2")
-										img(class="w-full h-56 lg:h-auto object-cover" src="images/feature (3).jpg")
-										div(class="absolute z-10 h-full w-full bg-red-400 bg-opacity-20 hover:bg-red-500 transition border-0 border-red-500 p-4 opacity-90")
-										p(class="text-lg font-semibold absolute z-20 left-0 bottom-0 ml-4 mb-4")  TẤM ỐP NHÔM NHỰA
-									div(class="relative cursor-pointer flex text-white md:mx-2")
-										img(class="w-full h-56 lg:h-auto object-cover" src="images/feature (1).jpg")
-										div(class="absolute z-10 h-full w-full bg-red-400 bg-opacity-20 hover:bg-red-500 transition border-0 border-red-500 p-4 opacity-90")
-										p(class="text-lg font-semibold absolute z-20 left-0 bottom-0 ml-4 mb-4") TRẦN NHÔM KIM LOẠI
-									div(class="relative cursor-pointer flex text-white lg:mx-2")
-										img(class="w-full h-56 lg:h-auto object-cover" src="images/feature (2).jpg")
-										div(class="absolute z-10 h-full w-full bg-red-400 bg-opacity-20 hover:bg-red-500 transition border-0 border-red-500 p-4 opacity-90")
-										p(class="text-lg font-semibold absolute z-20 left-0 bottom-0 ml-4 mb-4")  TẤM ỐP NHÔM SOLID
-
-							div(class="lg:col-span-3 relative overflow-hidden")
-								div(id="contentSlide")
-									- for(var i = 0; i< 4; i++)
-										div(class="block lg:flex items-center")
-											img(class="object-center object-cover w-full lg:w-auto h-48 xl:h-72 lg:mt-10 lg:mx-2" src="images/tech_2.jpg")
-											div(class="mt-5 lg:ml-5")
-												h4(class="text-lg font-semibold mb-3") TẤM ỐP NHÔM MẶT DỰNG
-												p(class="text-gray-500") Đáp ứng hình dáng đặc biệt phức tạp theo ý tưởng xây dựng (gấp hộp, uốn cong). Màu sắc và họa tiết bề mặt sơn đáp ứng linh hoạt theo yêu cầu thiết kế
-												div.flex.space-x-4
-													div(class="text-gray-500 text-sm mt-3") Ngày: 20/03/2021
-													div(class="text-gray-500 text-sm mt-3") Lượt xem: 2K
-												a(href="#" class="ml-auto text-red-500 block text-right") Chi tiết >>
-			// End giai phap
+		.relative.navbar_override
+			.max-w-7xl.mx-auto.px-6
+				.flex.justify-between.items-center.border-gray-100.py-6(class='md:justify-start md:space-x-10')
+					.flex.flex-shrink-0.justify-start(class='lg:w-0 lg:flex-1')
+						a(href='/')
+							span.sr-only Fomocraft
+							div(style='display:inline-block;max-width:100%;overflow:hidden;position:relative;box-sizing:border-box;margin:0')
+								div(style='box-sizing:border-box;display:block;max-width:100%')
+									img(style='max-width:100%;display:block;margin:0;border:none;padding:0' alt='' aria-hidden='true' role='presentation' src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjM2LjciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+')
+								img(alt='logo' src='https://fomocraft.com/_next/image?url=%2Flogo1.png&w=128&q=75' decoding='async' style='position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%')
+					.z-40.-mr-2.-my-2(class='md:hidden')
+						button.rounded-md.p-2.inline-flex.items-center.justify-center.text-primary(type='button' aria-expanded='false')
+							span.sr-only Open menu
+							svg.h-6.w-6(xmlns='http://www.w3.org/2000/svg' fill='none' viewbox='0 0 24 24' stroke='currentColor' aria-hidden='true')
+								path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16')
+					nav.hidden.space-x-10(class='md:flex')
+						a.nav-item.text-base.font-light.text-primary.selected(href='/') Home
+						a.nav-item.text-base.font-light.text-primary(href='/services') Services
+						a.nav-item.text-base.font-light.text-primary(href='/portfolio') Portfolio
+						a.flex.items-center.rounded-md(target='_blank' href='mailto:fomocraft@gmail.com')
+							span.text-base.font-light.text-primary Contact
+							svg.h-5.w-5.ml-2(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 20 20' fill='#00c9a7')
+								path(d='M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z')
+								path(d='M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z')
+						a.-mr-3.pr-3.flex.items-center.rounded-md(target='_blank' href='https://twitter.com/fomocraft')
+							span.whitespace-nowrap.text-primary
+								| Follow
+								| Us
+							svg.h-6.w-6.ml-2(fill='#00c9a7' viewbox='0 0 24 24' aria-hidden='true')
+								path(d='M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84')
+					.hidden.items-center.justify-end(class='md:flex md:flex-1 lg:w-0')
+						a.whitespace-nowrap.text-base.font-light.text-gray-500(href='#' class='hover:text-gray-900')
+						a.ml-8.whitespace-nowrap.inline-flex.items-center.justify-center.px-4.py-2.border.border-transparent.rounded-md.shadow-sm.text-base.font-light(href='#')
 
 
-			// Doi tac
-			section(class="" )
-				div(class="py-10 lg:py-20 bg-gray-50 " style="background: linear-gradient( rgba(255,255,255, 0.9), rgba(255,255,255, 01) ), url(/images/DSC_1015.jpg) top center no-repeat")
-					div(class="container p-3 mx-auto px-4")
-						div(class="mb-12")
-							h2(class="leading-snug lg:leading-snug text-3xl md:text-4xl lg:text-5xl font-bold font-heading uppercase text-center") Đối Tác
-						div(class="grid lg:grid-cols-2 gap-5 lg:gap-10")
-							- var arr = [{img:'images/10.-Hm-th-thim.jpg',title:'Hầm Thủ Thiên',p:'BQLDA Đại lộ Đông Tây'},{img:'images/12.-Sala-i-quang-minh.jpg',title:'SALA ĐẠI QUANG MINH',p:'Công ty Đại Quang Minh'},{img:'images/11.-Thaco.jpg',title:'HỆ THỐNG SHOWROOM THACO',p:'Công ty CP ô tô Trường Hải'},{img:'images/17.-sherwood.jpg',title:'SHERWOOD RESIDENCE',p:'Công ty TNHH Vạn Thịnh Phát'}]
-							
-							each item in arr
-								div(class="relative cursor-pointer flex text-white card lg:h-auto")
-									div.content
-										div.front.flex
-											img(class="w-full object-cover object-center" src=item.img)
-										div.back.flex
-											img(class="w-full object-cover object-center" src=item.img)
-											div(class="absolute z-10 h-full w-full bg-gradient-to-t from-black to-red-500 bg-opacity-20 transition border-0 border-red-500 p-4 opacity-80")
-											div(class="absolute z-20 left-0 bottom-0 ml-4 mb-4")
-												h3(class="font-bold text-2xl")= item.title
-												p(class="opacity-90")= item.p
+		section(class="text-center bg-center bg-cover bg-no-repeat" style="background-image: url(./images/background/landingbackground.jpg)")
+			div(class="w-full py-40 lg:py-52 px-4" style="background-image: url(./images/background/background_transparent.png)")
+				div(class="w-full max-w-2xl mx-auto" data-aos="fade-up")
+					h2(class="text-white text-5xl mt-2 mb-6 leading-tight font-semibold font-heading" ) No paper plane can be made without paper
+					p(class="mb-8 text-gray-300 leading-relaxed" ) Professional, dedicated, local. Dunder Mifflin is on its best patch to change the way you think about paper. That’s us - people who sell limitless paper in the paperless world.
+					div(class=" max-w-sm mx-auto flex flex-row justify-evenly ")
+						a(href="#" class="backdrop-opacity-10 hover:bg-blue-900 hover:bg-opacity-30  index-button1-border mb-4 mx-auto inline-flex items-center sm:px-12 px-10 py-2 text-base rounded-full text-white font-sophia" ) Sign up
+						a(href="#" class="inline-flex mb-4 mx-auto button_gradient_bg items-center sm:px-12 px-10 py-2 text-base  rounded-full text-white font-sophia" ) Learn more
 
-					div(class="text-center mt-10 lg:mt-16")
-						a(href="#" class="inline-block py-2 px-10 text-red-600 hover:text-white hover:bg-red-600 border-2 border-red-400 uppercase leading-loose outline-none transition duration-200") Xem tất cả
-			// End Doi Tac
+		section(class="text-white bg-center bg-cover bg-no-repeat py-40 px-4" style="background-image: url(./images/background/services_background.jpg)")
+			div(class="text-center")
+				h2(class="text-3xl text-center mt-2 mb-12 font-semibold font-heading" ) Features of Dunder Mifflin
+			
+			- var services = [{title:"Marketing", desc: "With dozens of successful token launches under our belt, we’re intimate with all the ins and outs of crypto marketing. As the industry changes at light speed, so do we.", img: "images/services/about_1.jpg"}, {title:"Marketing", desc: "With dozens of successful token launches under our belt, we’re intimate with all the ins and outs of crypto marketing. As the industry changes at light speed, so do we.", img: "images/services/about_2.jpg"}, {title:"Marketing", desc: "With dozens of successful token launches under our belt, we’re intimate with all the ins and outs of crypto marketing. As the industry changes at light speed, so do we.", img: "images/services/about_3.jpg"}, {title:"Marketing", desc: "With dozens of successful token launches under our belt, we’re intimate with all the ins and outs of crypto marketing. As the industry changes at light speed, so do we.", img: "images/services/about_4.jpg"}]
+			div(class="mt-12 px-4 overflow-hidden  md:flex-row md:max-w-3xl mx-auto flex-wrap flex flex-col" data-aos="fade-left")
+				each item in services
+					div(class="pt-12 my-6 h-80 max-w-xs mx-auto flow-root border-2 border-gray-600  bg-cover bg-no-repeat rounded-3xl relative overflow-hidden")
+						img(class="w-full object-cover object-center absolute top-0" src=item.img)
+						div(class="z-10 px-6 relative")
+							h3(class="text-3xl font-sophia font-bold text-primary" )=item.title
+							p(class="tracking-tight mt-5 text-white text-sm")=item.desc
 
-
-			section(class="" )
-				div(class="py-10 lg:py-20 bg-gray-50 ")
-					div(class="container p-3 mx-auto px-4")
-						div(class="grid lg:grid-cols-2 gap-5 lg:gap-10")
-							div 
-								div(class="mb-10 lg:mb-16 ")
-									//- span(class="text-green-600 font-bold") Dolor sit amet consectutar
-									h2(class="leading-snug lg:leading-snug text-3xl md:text-4xl lg:text-5xl font-bold font-heading uppercase border-l-8 border-red-500 pl-6") Liên Hệ
-								div(class="grid lg:grid-cols-2 gap-6")
-									div
-										h3(class="font-bold text-2xl mb-5") HCM - Trụ sở chính
-										div(class="text-gray-500")
-											p.flex.space-x-5.mb-3
-												img(src="images/geo-alt-fill.svg")
-												span Lô G-4B, KCN Mỹ Phước 2, Bến Cát, Tỉnh Bình Dương, VN.
-											p.flex.space-x-5.mb-3
-												img(src="images/telephone-fill.svg")
-												span (+84) 0274 355 6310-11-12
-											p.flex.space-x-5.mb-3
-												img(src="images/printer-fill.svg")
-												span (+84) 0274 355 6314
-									div
-										h3(class="font-bold text-2xl mb-5") HCM - Văn Phòng
-										div(class="text-gray-500")
-											p.flex.space-x-5.mb-3
-												img(src="images/geo-alt-fill.svg")
-												span 871 Trường Chinh, P. Tây Thạnh, Q. Tân Phú, TP.HCM
-											p.flex.space-x-5.mb-3
-												img(src="images/telephone-fill.svg")
-												span (+84) 028 3815 0080-79
-											p.flex.space-x-5.mb-3
-												img(src="images/telephone-fill.svg")
-												span (+84) 0933 178 272
-							div(class="items-end lg:flex justify-end")
-								div 
-									h2(class="leading-snug lg:leading-snug text-2xl lg:text-3xl text-red-500 font-bold font-heading uppercase ") Bài viết mới
-									ul(class="text-gray-500 space-y-4 mt-6 lg:mt-10")
-										li(class="hover:text-black cursor-pointer") 5 ỨNG DỤNG CỰC HỮU HIỆU TẤM ALU COMPOSITE TAC PVDF (TAC F)
-										li(class="hover:text-black cursor-pointer") Chăm chút cho bảng hiệu - thiết thực hay lãng phí?
-										li(class="hover:text-black cursor-pointer") SƠN PVDF - FAQ - Những câu hỏi thường gặp
-										li(class="hover:text-black cursor-pointer") Xu hướng thiết kế bảng hiệu bạn nên biết
-										li(class="hover:text-black cursor-pointer") Hướng dẫn chọn tấm alu composite trong quảng cáo
+		.bg-center.py-20.bg-cover.bg-no-repeat.bg-heretohelp.relative.bg-white(style='background-image: url(./images/background/heretohelp.jpg')
+			.relative.max-w-7xl.mx-auto.px-4.py-12(class='sm:px-6 lg:px-8 lg:py-16')
+				.flex-col.flex(class='md:mx-auto md:w-1/2' data-aos="fade-right")
+					h2.text-base.text-xl.font-black.font-sophia.uppercase.text-center.text-white
+						| Looking for a strategic
+						| investor or marketing advisor?
+					p.my-8.text-white.text-3xl.font-black.font-sophia.text-center Look no further!
+					p.mt-3.text-center.text-sm.text-white
+						| Fomocraft maintains a team of global experts that provide
+						| continuous access to top-notch advisory throughout your Fomocraft engagement. Whether you&rsquo;re looking to launch
+						| the next big thing in blockchain or just need to put the finishing touches on your crypto masterpiece,
+						| successful projects utilize Fomocraft
+						a.underline(href='/services') services
+						| to develop their brand
+						| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and build their runway for long-term success!
+					.mt-12.inline-flex.mx-auto.rounded-md.shadow
+						a.inline-flex.text-xl.items-center.justify-center.px-5.py-3.border.border-transparent.text-base.font-black.font-sophia.rounded-full.text-gray-800.bg-white(href='mailto:fomocraft@gmail.com' class='hover:bg-gray-50')
+							| Get
+							| In Touch
+							svg.-mr-1.ml-3.h-5.w-5.text-grey-800(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 20 20' fill='currentColor' aria-hidden='true')
+								path(d='M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z')
+								path(d='M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z')
 
 
-
-			//Footer
-			section(class="" )
-				div(class="py-10 lg:py-20 bg-gray-900 ")
-					div(class="container p-3 mx-auto px-4")
-						div(class="flex flex-wrap")
-							div(class="w-full lg:w-1/3 mb-16 lg:mb-0")
-								a(href="#", class="inline-block mb-3 text-white text-3xl font-bold leading-none")
-									img(class="mb-3", src="images/logo_tac.png", alt="", class="h-12", width="auto")
-								p(class="mb-4 max-w-sm text-gray-400 leading-loose") CÔNG TY CỔ PHẦN TOP AMERICAN VIỆT NAM. Lô G-4B -CN Mỹ Phước 2, P. Mỹ Phước, TX Bến Cát, Bình Dương, VN
-								div
-									a(class="inline-block w-10 mr-2 p-2 bg-gray-800 hover:bg-gray-700 rounded", href="#")
-										img(class="mx-auto", src="atis-assets/social/facebook.svg")
-									a(class="inline-block w-10 mr-2 p-2 bg-gray-800 hover:bg-gray-700 rounded", href="#")
-										img(class="mx-auto", src="atis-assets/social/twitter.svg")
-									a(class="inline-block w-10 p-2 bg-gray-800 hover:bg-gray-700 rounded", href="#")
-										img(class="mx-auto", src="atis-assets/social/instagram.svg")
-							div(class="w-full lg:w-2/3 lg:pl-16 flex flex-wrap justify-between")
-								div(class="w-full md:w-1/3 lg:w-auto mb-16 md:mb-0")
-									h3(class="mb-6 text-2xl font-bold text-white") Tìm hiểu thêm
-									ul
-										li(class="mb-4")
-											a(class="text-gray-400 hover:text-gray-300", href="#") Tin tức
-										li(class="mb-4")
-											a(class="text-gray-400 hover:text-gray-300", href="#") Sản phẩm
-										li(class="mb-4")
-											a(class="text-gray-400 hover:text-gray-300", href="#") Dự án
-										li
-											a(class="text-gray-400 hover:text-gray-300", href="#") Công nghệ
-								div(class="w-full md:w-1/3 lg:w-auto mb-16 md:mb-0")
-									h3(class="mb-6 text-2xl font-bold text-white") Thông tin
-									ul
-										li(class="mb-4")
-											a(class="text-gray-400 hover:text-gray-300", href="#") Thành viên tổ chức
-										li(class="mb-4")
-											a(class="text-gray-400 hover:text-gray-300", href="#") Chính sách giá
-										li(class="mb-4")
-											a(class="text-gray-400 hover:text-gray-300", href="#") Điều khoản
-										li
-											a(class="text-gray-400 hover:text-gray-300", href="#") Chính sách
-								div(class="w-full md:w-1/3 lg:w-auto")
-									h3(class="mb-6 text-2xl font-bold text-white") Công ty
-									ul
-										li(class="mb-4")
-											a(class="text-gray-400 hover:text-gray-300", href="#") Giới thiệu
-										li(class="mb-4")
-											a(class="text-gray-400 hover:text-gray-300", href="#") Tầm nhìn, sứ mệnh
-										li(class="mb-4")
-											a(class="text-gray-400 hover:text-gray-300", href="#") Việc làm
-										li
-											a(class="text-gray-400 hover:text-gray-300", href="#") Liên hệ
-						p(class="lg:text-center text-sm text-gray-400 border-t border-gray-800 pt-12 mt-10 lg:mt-16") &copy; 2021. All rights reserved.
+		footer.footer_override
+			.max-w-7xl.mx-auto.py-12.px-4.overflow-hidden(class='sm:px-6 lg:px-8')
+				div(data-aos="fade-up")
+					h2.max-w-3xl.mx-auto.mt-6.text-2xl.text-center.font-extrabold.text-white(class='sm:text-2xl')
+					.mx-auto.text-center.mt-6
+						.mx-auto.button_gradient_border.inline-flex.items-center.px-5.border.border-transparent.text-base.font-medium.rounded-full.shadow-sm.text-white(class='focus:outline-none')
+							a.inline-flex.items-center.px-5.py-2.backdrop-opacity-10.index-button1-border.mb-4.mx-auto.inline-flex.items-center.px-5.py-2.text-base.rounded-full.text-white.font-sophia.rounded-full.shadow-sm.text-white(target='_blank' href='https://twitter.com/fomocraft' class='hover:bg-blue-900 hover:bg-opacity-30')
+								| Follow
+								| us
+								svg.h-6.w-6.ml-2(fill='currentColor' viewbox='0 0 24 24' aria-hidden='true')
+									path(d='M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84')
+					p.mt-8.text-center.text-base.text-white &copy; 2021 Fomocraft, Inc. All rights reserved.
