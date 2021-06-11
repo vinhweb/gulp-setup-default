@@ -1,21 +1,19 @@
 doctype html
 html(lang="en")
 	head
-		title Page title
+		title THT Ventures
 		meta(charset="utf-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
 		meta(name="description" content="")
 		meta(name="author" content="")
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 
-		//build:css css/styles.min.css
-		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css")
-		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css")
-
 		link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap")
 		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css")
 		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css")
 		link(rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css")
+
+		//build:css css/styles.min.css
 		link(rel="stylesheet" href="css/styles.css")
 		//endbuild
 
@@ -25,11 +23,10 @@ html(lang="en")
 		//build:css js/main.min.js
 		script(src="js/jquery-2.2.4.min.js")
 		script(src="js/jquery.easy-autocomplete.min.js")
+		//endbuild
 		script(src="https://unpkg.com/aos@next/dist/aos.js")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js")
-		script(src="js/custom-script-2-v3.js")
 		script(src="js/main.js")
-		//endbuild
 
 	body.antialiased.bg-body.text-body.font-body.relative
 
@@ -39,10 +36,8 @@ html(lang="en")
 					.flex.flex-shrink-0.justify-start(class='lg:w-0 lg:flex-1')
 						a(href='/')
 							span.sr-only Fomocraft
-							div(style='display:inline-block;max-width:100%;overflow:hidden;position:relative;box-sizing:border-box;margin:0')
-								div(style='box-sizing:border-box;display:block;max-width:100%')
-									img(style='max-width:100%;display:block;margin:0;border:none;padding:0' alt='' aria-hidden='true' role='presentation' src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjM2LjciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+')
-								img(alt='logo' src='https://fomocraft.com/_next/image?url=%2Flogo1.png&w=128&q=75' decoding='async' style='position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%')
+							div(style='max-width:100%;overflow:hidden;position:relative;box-sizing:border-box;margin:0')
+								img(alt='logo' src='./images/logo fomo.png' decoding='async' class="block" style="height: 40px; width: auto")
 					.z-40.-mr-2.-my-2(class='md:hidden')
 						button.rounded-md.p-2.inline-flex.items-center.justify-center.text-primary(type='button' aria-expanded='false')
 							span.sr-only Open menu
@@ -69,24 +64,26 @@ html(lang="en")
 
 
 		section(class="text-center bg-center bg-cover bg-no-repeat" style="background-image: url(./images/background/landingbackground.jpg)")
-			div(class="w-full py-40 lg:py-52 px-4" style="background-image: url(./images/background/background_transparent.png)")
-				div(class="w-full max-w-2xl mx-auto" data-aos="fade-up")
-					h2(class="text-white text-5xl mt-2 mb-6 leading-tight font-semibold font-heading" ) No paper plane can be made without paper
-					p(class="mb-8 text-gray-300 leading-relaxed" ) Professional, dedicated, local. Dunder Mifflin is on its best patch to change the way you think about paper. That’s us - people who sell limitless paper in the paperless world.
+			div(class="w-full py-32 lg:py-40 px-4" style="background-image: url(./images/background/background_transparent.png)")
+				div(class="mx-auto max-w-4xl px-4 sm:mt-54" data-aos="fade-up")
+					<h1 class="text-5xl font-sophia font-black text-white">Nurturing Project Blockchain.</h1>
+					<h2 class="text-4xl font-sophia mt-10 mb-20 text-white">Let your project reach the world.</h2>
+					<p class="text-lg font-Roboto my-12 max-w-prose mx-auto text-white">An organization specializing in consulting on marketing strategies and developing the most powerful Blockchain 4.0 technology</p>
 					div(class=" max-w-sm mx-auto flex flex-row justify-evenly ")
 						a(href="#" class="backdrop-opacity-10 hover:bg-blue-900 hover:bg-opacity-30  index-button1-border mb-4 mx-auto inline-flex items-center sm:px-12 px-10 py-2 text-base rounded-full text-white font-sophia" ) Sign up
 						a(href="#" class="inline-flex mb-4 mx-auto button_gradient_bg items-center sm:px-12 px-10 py-2 text-base  rounded-full text-white font-sophia" ) Learn more
 
 		section(class="text-white bg-center bg-cover bg-no-repeat py-40 px-4" style="background-image: url(./images/background/services_background.jpg)")
 			div(class="text-center")
-				h2(class="text-3xl text-center mt-2 mb-12 font-semibold font-heading" ) Features of Dunder Mifflin
-			
-			- var services = [{title:"Marketing", desc: "With dozens of successful token launches under our belt, we’re intimate with all the ins and outs of crypto marketing. As the industry changes at light speed, so do we.", img: "images/services/about_1.jpg"}, {title:"Marketing", desc: "With dozens of successful token launches under our belt, we’re intimate with all the ins and outs of crypto marketing. As the industry changes at light speed, so do we.", img: "images/services/about_2.jpg"}, {title:"Marketing", desc: "With dozens of successful token launches under our belt, we’re intimate with all the ins and outs of crypto marketing. As the industry changes at light speed, so do we.", img: "images/services/about_3.jpg"}, {title:"Marketing", desc: "With dozens of successful token launches under our belt, we’re intimate with all the ins and outs of crypto marketing. As the industry changes at light speed, so do we.", img: "images/services/about_4.jpg"}]
+				<h2 class="text-4xl font-black font-sophia  text-white">Purpose driven growth.</h2>
+				<p class="mt-8 mx-auto text-lg text-white  lg:max-w-3xl">Fomocraft is more than a name - crafting FOMO is what we do!</p>
+
+			- var services = [{title:"Strategy", desc: "Many years of experience in the fierce market Crypto gave us multiple perspectives and how to best operate to build a solid foundation and excellent value.", img: "images/services/about_1.jpg"}, {title:"Marketing", desc: "With dozens launches of quality tokens and a professional development team, we always adapt to new technologies and trends to connect unique ideas together.", img: "images/services/about_2.jpg"}, {title:"Network", desc: "Renowned crypto industry partners are accompanying and growing with us everywhere on earth. Influencers, organizations, community builders, etc. .. Always support development to spread value in the most positive way!", img: "images/services/about_3.jpg"}, {title:"Investment", desc: "We take on the most potential blockchain projects in DeFi in particular and Cryptocurrencies in general. It will change the way we look at technology!!", img: "images/services/about_4.jpg"}]
 			div(class="mt-12 px-4 overflow-hidden  md:flex-row md:max-w-3xl mx-auto flex-wrap flex flex-col" data-aos="fade-left")
 				each item in services
 					div(class="pt-12 my-6 h-80 max-w-xs mx-auto flow-root border-2 border-gray-600  bg-cover bg-no-repeat rounded-3xl relative overflow-hidden")
-						img(class="w-full object-cover object-center absolute top-0" src=item.img)
-						div(class="z-10 px-6 relative")
+						img(class="w-full h-full object-cover object-center absolute top-0" src=item.img)
+						div(class="z-10 px-6 relative text-center")
 							h3(class="text-3xl font-sophia font-bold text-primary" )=item.title
 							p(class="tracking-tight mt-5 text-white text-sm")=item.desc
 

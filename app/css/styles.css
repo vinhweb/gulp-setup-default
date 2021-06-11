@@ -20,3 +20,6 @@ body {
 .text-primary {
   --tw-text-opacity: 1;
   color: rgba(0, 201, 167, var(--tw-text-opacity)); }
+
+.bg-gradient {
+  background-image: url(../images/background/services_background.jpg); }
