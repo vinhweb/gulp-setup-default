@@ -1,12 +1,11 @@
 $(document).ready(function(){
   AOS.init();
 
-  const menuBtn = $('.menuBtn')
-  const menuHeader = $('#menuHeader')
+  const menuBtn = $('.toggle-menu')
+  const menuHeader = $('#mobile-menu')
 
   menuBtn.click(()=>{
     menuHeader.toggleClass('hidden')
-    menuBtn.toggleClass('active')
   })
 });
 		
