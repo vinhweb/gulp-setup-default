@@ -1,12 +1,11 @@
-$(document).ready(function(){
-  AOS.init();
-
-  const menuBtn = $('.menuBtn')
-  const menuHeader = $('#menuHeader')
-
-  menuBtn.click(()=>{
-    menuHeader.toggleClass('hidden')
-    menuBtn.toggleClass('active')
-  })
+var myFullpage = new fullpage('#fullpage', {
+  anchors: ['firstPage', 'secondPage', '3rdPage'],
+  sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
+  navigation: true,
+  navigationPosition: 'right',
+  navigationTooltips: ['First page', 'Second page', 'Third and last page']
 });
-		
+
+$(document).ready(function() {
+
+});
