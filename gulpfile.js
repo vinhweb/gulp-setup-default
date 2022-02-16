@@ -10,7 +10,7 @@ var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var del = require('del');
 var concat = require('gulp-concat');
-var pug = require('gulp-pug');
+// var pug = require('gulp-pug');
 
 gulp.task('browserSync', function() {
   browserSync.init({
@@ -42,6 +42,9 @@ gulp.task('html', function () {
   return gulp.src(['app/partials/header.html', 'app/partials/indexBody.html', 'app/partials/footer.html'])
     .pipe(concat("index.html"))
     .pipe(gulp.dest("app"))
+    .pipe(browserSync.reload({
+      stream: true
+    }))
 });
 
 gulp.task('useref', function(){
@@ -71,14 +74,17 @@ gulp.task('clean:dist', function(cb) {
 })
 
 
-gulp.task('watch', gulp.parallel('browserSync','sass', 'pug', function (){
+gulp.task('watch', gulp.parallel('browserSync','sass', 'html', function (){
   gulp.watch('app/scss/**/*.scss', gulp.series('sass')); 
-  gulp.watch('app/pug/**/*.pug', gulp.series('pug')); 
-  gulp.watch('app/*.html', browserSync.reload); 
-  gulp.watch('app/js/**/*.js', browserSync.reload); 
+  // gulp.watch('app/pug/**/*.pug', gulp.series('pug'));
+  gulp.watch('app/partials/**/*.html', gulp.series('html'));
+
+  gulp.watch('app/*.html', browserSync.reload);
+  // gulp.watch('app/partials/**/*.html', browserSync.reload);
+  gulp.watch('app/js/**/*.js', browserSync.reload);
 }));
 
-gulp.task('build', gulp.series(`clean:dist`, `sass`, `pug`, `useref`, `images`, `fonts`), function (){
+gulp.task('build', gulp.series(`clean:dist`, `sass`, `html`, `useref`, `images`, `fonts`), function (){
   console.log('Building files');
 })
 
