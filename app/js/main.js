@@ -7,5 +7,7 @@ var myFullpage = new fullpage('#fullpage', {
 });
 
 $(document).ready(function() {
-
+  $('#menuBtn').click(()=>{
+    $('#mobile-menu').toggleClass('hidden')
+  })
 });
